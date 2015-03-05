@@ -11,7 +11,7 @@ class HeaderFileTest extends FunSuite {
 
   val basePath = "src/main/resources/"
 
-  val file = new HeaderFile(basePath + "twosum-tc1.txt")
+  val file = new HeaderFile(basePath + "twosum/twosum-tc1.txt")
 
   test("header exists") {
     assert(file.headers.isDefinedAt("expected"))

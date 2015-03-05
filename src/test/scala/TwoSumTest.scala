@@ -8,7 +8,7 @@ import org.scalatest.junit.JUnitRunner
 @RunWith(classOf[JUnitRunner])
 class TwoSumTest extends org.scalatest.FunSuite {
 
-  val basePath = "src/main/resources/"
+  val basePath = "src/main/resources/twosum/"
 
   1 to 5 foreach (i => {
     test("Test Case " + i ) {
