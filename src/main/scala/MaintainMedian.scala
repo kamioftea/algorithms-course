@@ -10,13 +10,15 @@ case class State(sum: Int = 0, lowest: Heap[Int] = MaxHeap.empty, highest: Heap[
     def balanceHeaps(l: Heap[Int], h: Heap[Int]): (Heap[Int], Heap[Int]) = {
       if (l.size < h.size) {
         h.pop() match {
-          case Some((i, h1)) => (l.insert(i), h1)
+          case Some((j, h1)) => (l.insert(j), h1)
+          case None => throw new RuntimeException("Pop from empty heap")
         }
       }
       else if (l.size > h.size + 1)
       {
         l.pop() match {
-          case Some((i, l1)) => (l1, h.insert(i))
+          case Some((j, l1)) => (l1, h.insert(j))
+          case None => throw new RuntimeException("Pop from empty heap")
         }
       }
       else (l,h)

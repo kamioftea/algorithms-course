@@ -5,7 +5,7 @@ import scala.io.Source
  *
  * Created by jeff on 04/03/2015.
  */
-class HeaderFile(path: String) {
+class HeaderFile(val path: String) {
 
   private def parseHeaders(lines: List[String]): (Map[String, String], List[String]) = {
     @tailrec
