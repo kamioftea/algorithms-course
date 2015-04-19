@@ -30,4 +30,6 @@ class HeaderFile(val path: String) {
   def headerAt(key: String): Option[String] =
     if(headers.isDefinedAt(key)) Some(headers(key))
     else None
+
+  def intHeaderAtOrElse(key: String, orElse: Int = 0): Int = this.headerAt(key).map(_.toInt).getOrElse(orElse)
 }
