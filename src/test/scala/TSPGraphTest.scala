@@ -7,7 +7,7 @@ import org.scalatest.junit.JUnitRunner
  * Created by Jeff on 03/05/2015.
  */
 @RunWith(classOf[JUnitRunner])
-class TSPGraphTest extends FunSuite  with Matchers {
+class TSPGraphTest extends FunSuite with Matchers {
 
   val basePath = "src/main/resources/tsp"
 

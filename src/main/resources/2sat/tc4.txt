@@ -1,0 +1,8 @@
+Clauses: 4
+Variables: 2
+Expected: false
+
+1 2
+-1 2
+-2 1
+-1 -2
